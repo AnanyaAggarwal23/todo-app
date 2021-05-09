@@ -1,0 +1,32 @@
+<div class="table-container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Owner</th>
+                <th scope="col">Title</th>
+                <th scope="col">Body</th>
+                <th scope="col">Status</th>
+                <th scope="col">Media</th>
+                <th scope="col">Creation Date</th>
+                <th scope="col">Edition Date</th>
+                <th scope="col">Deletion Date</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let note of notes; let i=index">
+                <td>{{note.owner}}</td>
+                <td>{{note.title}}</td>
+                <td>{{note.body}}</td>
+                <td>{{note.status}}</td>
+                <td>{{note.media}}</td>
+                <td>{{note.creationDate}}</td>
+                <td>{{note.editionDate}}</td>
+                <td>{{note.deletionDate}}</td>
+                <td><button type="button" class="btn btn-secondary" (click)="onEdit(note)">Edit</button></td>
+                <td><button type="button" class="btn btn-secondary" (click)="onDelete(note)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

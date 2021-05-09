@@ -1,0 +1,6 @@
+<app-data-form *ngIf="btnText" [selectedNote]="selectedNote" [btnText]="btnText"
+    (dataModified)="onFormSubmit($event)"></app-data-form>
+    <div class="add-new">
+        <button type="button" class="btn btn-secondary" (click)="onAdd()">Add a new note</button>
+    </div>
+<app-data-table [notes]="notes" (editNote)="onEdit($event)" (deleteNote)="onDelete($event)"></app-data-table>
